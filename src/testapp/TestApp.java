@@ -6,11 +6,12 @@ package testapp;
  * @author Lenovo
  */
 
-import fixedStack.FixedStack;
+import stack1.static1.FixedStack;
 import graphs.Graph;
 import graphs.Vertex;
 import java.util.Scanner;
-import stack.Stack;
+import queue.staticQueue.simpleQueue.LinearQueue;
+import stack1.dynamic.Stack;
 
 public class TestApp {
 
@@ -18,21 +19,33 @@ public class TestApp {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
-        
-        
-        FixedStack stack = new FixedStack<Integer>(3) ;
-        stack.push(5);
-        stack.push(10);
-        stack.push(15);
-        stack.display();
-        stack.pop();
-        System.out.println("after pop element");
-        stack.display();
-        stack.push(20);
-        System.out.println("push 20 ---->");
-        stack.display();
-                stack.push(25);
+          // static leaner queue
+             LinearQueue queue = new LinearQueue(5);
+             queue.enqueue(1);
+             queue.enqueue(2);
+             queue.enqueue(3);
+             queue.enqueue(4);
+             queue.enqueue(5);
+             queue.dequeue();
+             queue.dequeue();
+             queue.enqueue(4);
+             queue.dequeue();
+             queue.enqueue(4);
+             queue.display();
+             
+           // static stack 
+//        FixedStack stack = new FixedStack<Integer>(3) ;
+//        stack.push(5);
+//        stack.push(10);
+//        stack.push(15);
+//        stack.display();
+//        stack.pop();
+//        System.out.println("after pop element");
+//        stack.display();
+//        stack.push(20);
+//        System.out.println("push 20 ---->");
+//        stack.display();
+//                stack.push(25);
 
       //  Soluation test = new Soluation();
         // Dynamic Stack with link Nodes
